@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Banhpeo</string>
+
+    <string-array name="Menu">
+        <item>Announcement</item>
+        <item>Lectures</item>
+        <item>Assignment</item>
+        <item>Grade</item>
+    </string-array>
 </resources>
