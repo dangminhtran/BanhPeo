@@ -1,7 +1,9 @@
 package com.example.banhpeo;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -68,7 +70,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-    public Button getTeacherButton() {
-        return teacherButton;
+    @Nullable
+    @Override
+    public ActionBar getActionBar() {
+        return super.getActionBar();
     }
 }
