@@ -21,13 +21,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    private Button studentButton;
-    private Button teacherButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.role);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
@@ -35,17 +33,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void setSupportActionBar(Toolbar toolbar) {
     }
 
-    public void buttonClick (View view){
-        studentButton = (Button) findViewById(R.id.student_button);
-        studentButton.setOnClickListener(view1 -> {
-//                setContentView(R.layout.login);
-            openLoginPage();
+    public void buttonClick1 (View view){
+        Button studentButton = (Button) findViewById(R.id.student_button);
+        studentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLoginPage();
+            }
         });
 
-        teacherButton = (Button) findViewById(R.id.teacher_button);
-        teacherButton.setOnClickListener(view12 -> {
-//                setContentView(R.layout.login);
-            openLoginPage();
+    }
+    public void buttonClick2 (View view){
+        Button teacherButton = (Button) findViewById(R.id.teacher_button);
+        teacherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLoginPage();
+            }
         });
     }
 
