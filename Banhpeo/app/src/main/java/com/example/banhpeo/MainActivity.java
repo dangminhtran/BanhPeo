@@ -12,8 +12,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button studentButton;
@@ -32,20 +37,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void buttonClick (View view){
         studentButton = (Button) findViewById(R.id.student_button);
-        studentButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                setContentView(R.layout.login);
-            }});
+        studentButton.setOnClickListener(view1 -> {
+//                setContentView(R.layout.login);
+            openLoginPage();
+        });
 
         teacherButton = (Button) findViewById(R.id.teacher_button);
-        teacherButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                setContentView(R.layout.login);
-            }});
+        teacherButton.setOnClickListener(view12 -> {
+//                setContentView(R.layout.login);
+            openLoginPage();
+        });
     }
 
 
@@ -69,6 +70,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         } else if (text.equals("Grade")){
             setContentView(R.layout.grade_stud);
         }
+    }
+
+    public void setDate(){
+        TextView textView = findViewById(R.id.date);
+        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
+        String date = df.format(Calendar.getInstance().getTime());
+        textView.setText((CharSequence) textView);
+    }
+
+    public void openLoginPage (){
+        Intent intent = new Intent(this,Login.class);
+        startActivity(intent);
     }
 
     @Override
