@@ -21,6 +21,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    private Button studentButton;
+    private Button teacherButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void buttonClick1 (View view){
-        Button studentButton = (Button) findViewById(R.id.student_button);
+        studentButton = (Button) findViewById(R.id.student_button);
         studentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
     public void buttonClick2 (View view){
-        Button teacherButton = (Button) findViewById(R.id.teacher_button);
+        teacherButton = (Button) findViewById(R.id.teacher_button);
         teacherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
