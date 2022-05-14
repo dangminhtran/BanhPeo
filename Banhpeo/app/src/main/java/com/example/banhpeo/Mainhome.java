@@ -26,6 +26,6 @@ public class Mainhome extends AppCompatActivity {
         return true;
     }
 
-//    private void setSupportActionBar(Toolbar toolbar) {
-//    }
+    private void setSupportActionBar(Toolbar toolbar) {
+    }
 }
