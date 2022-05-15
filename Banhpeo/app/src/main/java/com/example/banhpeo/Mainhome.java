@@ -13,7 +13,7 @@ public class Mainhome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.role);
+        setContentView(R.layout.mainhome);
 
         Toolbar mtoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);
@@ -26,6 +26,5 @@ public class Mainhome extends AppCompatActivity {
         return true;
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
+
 }
