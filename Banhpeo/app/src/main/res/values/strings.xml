@@ -7,4 +7,12 @@
         <item>Assignment</item>
         <item>Grade</item>
     </string-array>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_favorite">Favorite</string>
+    <string name="nav_history">History</string>
+    <string name="nav_account">Account</string>
+    <string name="nav_user">My Profile</string>
+    <string name="nav_change_pass">Change Password</string>
+
 </resources>

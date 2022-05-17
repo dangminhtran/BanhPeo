@@ -15,7 +15,7 @@ public class Mainhome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainhome);
 
-        Toolbar mtoolbar = findViewById(R.id.toolbar);
+//        Toolbar mtoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);
     }
 
