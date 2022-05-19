@@ -17,9 +17,9 @@
         </item>
 
         <item
-            android:id="@+id/nav_history"
-            android:title="@string/nav_history"
-            android:icon="@drawable/ic_history">
+            android:id="@+id/nav_course"
+            android:title="@string/nav_course"
+            android:icon="@drawable/ic_baseline_class_24">
 
         </item>
     </group>

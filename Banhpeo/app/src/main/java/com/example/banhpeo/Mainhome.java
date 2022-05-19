@@ -2,8 +2,7 @@ package com.example.banhpeo;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.AdapterView;
-import android.widget.Button;
+
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +12,7 @@ public class Mainhome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainhome);
+        setContentView(R.layout.home_student);
 
 //        Toolbar mtoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);
