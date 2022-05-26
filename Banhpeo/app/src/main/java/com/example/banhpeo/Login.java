@@ -1,6 +1,7 @@
 package com.example.banhpeo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void OpenMainHome(){
-        Intent intent = new Intent(this, Mainhome.class);
+        Intent intent = new Intent(this, Mainhome_stud.class);
         startActivity(intent);
     }
 }
