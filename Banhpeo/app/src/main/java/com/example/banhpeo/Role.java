@@ -24,8 +24,8 @@ public class Role extends AppCompatActivity implements AdapterView.OnItemSelecte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.role);
-        setContentView(R.layout.home_teacher);
+        setContentView(R.layout.role);
+//        setContentView(R.layout.home_teacher);
 
     }
 
