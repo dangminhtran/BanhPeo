@@ -11,12 +11,24 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.banhpeo.fragment_stud.ChangePassFragment;
+import com.example.banhpeo.fragment_stud.CourseFragmentStud;
+import com.example.banhpeo.fragment_stud.HomeFragmentStud;
+import com.example.banhpeo.fragment_stud.ProfileFragmentStud;
 import com.google.android.material.navigation.NavigationView;
 
 public class Mainhome_stud extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar mtoolbar;
     private DrawerLayout sDrawer;
+    private static final int FRAGMENT_HOME = 1;
+    private static final int FRAGMENT_USER = 2;
+    private static final int FRAGMENT_COURSE = 3;
+    private static final int FRAGMENT_CHANGEPASS = 4;
+
+    private int currentFragment = FRAGMENT_HOME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +61,25 @@ public class Mainhome_stud extends AppCompatActivity implements NavigationView.O
         if(id == R.id.nav_course){
 
         } else if(id == R.id.nav_home){
-
-        } else if(id == R.id.nav_favorite){
-
+            if(FRAGMENT_HOME!= currentFragment){
+                replaceFragment(new HomeFragmentStud());
+                currentFragment = FRAGMENT_HOME;
+            }
+        } else if(id == R.id.nav_course){
+            if(FRAGMENT_HOME!= currentFragment){
+                replaceFragment(new CourseFragmentStud());
+                currentFragment = FRAGMENT_COURSE;
+            }
         } else if(id == R.id.nav_change_pass){
-
+            if(FRAGMENT_CHANGEPASS!= currentFragment){
+                replaceFragment(new ChangePassFragment());
+                currentFragment = FRAGMENT_CHANGEPASS;
+            }
         } else if(id == R.id.nav_user){
-
+            if(FRAGMENT_HOME!= currentFragment){
+                replaceFragment(new ProfileFragmentStud());
+                currentFragment = FRAGMENT_USER;
+            }
         }
 
         sDrawer.closeDrawer(GravityCompat.START);
@@ -69,5 +93,12 @@ public class Mainhome_stud extends AppCompatActivity implements NavigationView.O
         } else{
             super.onBackPressed();
         }
+    }
+
+    private void replaceFragment(Fragment fragment){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.drawer_layout_student, fragment);
+        fragmentTransaction.commit();
+
     }
 }

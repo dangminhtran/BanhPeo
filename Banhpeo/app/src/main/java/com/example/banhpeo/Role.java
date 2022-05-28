@@ -21,6 +21,7 @@ import java.util.Calendar;
 public class Role extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button studentButton;
     private Button teacherButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
