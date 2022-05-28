@@ -45,6 +45,8 @@ public class Mainhome_stud extends AppCompatActivity implements NavigationView.O
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        replaceFragment(new HomeFragmentStud());
     }
 
     @Override
